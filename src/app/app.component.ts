@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'PrimerTareaAngular';
+
+  mostrar = false;
+
+  tablaSueldos: {nombre: string, monto: number}[] = [
+    {nombre: 'Juan', monto: 10412},
+    {nombre: 'Pedro', monto: 5223},
+    {nombre: 'Maria', monto: 8335},
+  ];
+
+  showData() {
+    return (this.mostrar = true);
+  }
+
+  hideData() {
+    return (this.mostrar = false);
+  }
+
 }
